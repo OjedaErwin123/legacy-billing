@@ -15,7 +15,7 @@ variable "ami_id" {
 }
 
 variable "iam_instance_profile" {
-  default = "LabRole"
+  default = "LabInstanceProfile"
 }
 
 variable "my_public_ip" {

@@ -7,7 +7,7 @@ variable "app_port" {
 }
 
 variable "instance_type" {
-  default = "t2.micro"
+  default = "t3.micro"
 }
 
 variable "ami_id" {
@@ -20,5 +20,5 @@ variable "iam_instance_profile" {
 
 variable "my_public_ip" {
   description = "Tu IP publica /32 para el evento imprevisto"
-  default     = "0.0.0.0/0"
+  default     = "190.104.20.154/32"
 }

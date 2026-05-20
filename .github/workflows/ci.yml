@@ -27,12 +27,12 @@ jobs:
 
       - name: Package artifact
         run: |
-          mkdir -p artifact
-          cp -r . artifact/legacy-billing
+          mkdir -p /tmp/artifact/legacy-billing
+          cp -r ./* /tmp/artifact/legacy-billing/
           echo "Artifact created successfully"
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: legacy-billing-artifact
-          path: artifact/
+          path: /tmp/artifact/

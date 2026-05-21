@@ -6,10 +6,11 @@ resource "aws_instance" "app_server" {
 
   user_data = <<-USERDATA
     #!/bin/bash
-    set -e
-    yum update -y
-    curl -fsSL https://rpm.nodesource.com/setup_20.x | bash -
-    yum install -y nodejs
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+    export NVM_DIR="/root/.nvm"
+    source "$NVM_DIR/nvm.sh"
+    nvm install 16
+    nvm use 16
     mkdir -p /app
     cd /app
     cat > package.json << 'PKGJSON'

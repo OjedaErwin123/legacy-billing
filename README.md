@@ -26,4 +26,4 @@ terraform/
 ├── network/     # Security Group (puerto 3000, IP restringida /32)
 └── compute/     # Instancia EC2 t3.micro con user_data automatizado
 ## URL de Validación
-http://44.220.83.36:3000
+http://32.192.36.198:3000
